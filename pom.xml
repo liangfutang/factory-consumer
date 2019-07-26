@@ -16,9 +16,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zjut.dubbo.consumer</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>dubboconsumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>parent</name>
+    <name>dubboconsumer</name>
     <description>Parent project for Spring Boot</description>
 
     <properties>
