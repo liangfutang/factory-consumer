@@ -11,5 +11,11 @@
 
     <artifactId>config</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.zjut.dubbo.consumer</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

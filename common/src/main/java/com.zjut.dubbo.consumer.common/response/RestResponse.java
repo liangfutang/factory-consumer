@@ -1,4 +1,4 @@
-package com.zjut.dubbo.consumer.response;
+package com.zjut.dubbo.consumer.common.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

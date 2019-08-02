@@ -1,7 +1,7 @@
 package com.zjut.dubbo.consumer.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.zjut.dubbo.consumer.response.RestResponse;
+import com.zjut.dubbo.consumer.common.response.RestResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;

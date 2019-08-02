@@ -1,6 +1,6 @@
-package com.zjut.dubbo.consumer.exception;
+package com.zjut.dubbo.consumer.config.exception;
 
-import com.zjut.dubbo.consumer.response.RestResponse;
+import com.zjut.dubbo.consumer.common.response.RestResponse;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
