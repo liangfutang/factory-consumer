@@ -8,6 +8,7 @@
         <module>common</module>
         <module>call</module>
         <module>config</module>
+        <module>biz</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,17 +26,17 @@
         <java.version>1.8</java.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.zjut.spring.boot</groupId>
-                <artifactId>nb-spring-boot-dependencies</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+<!--            <dependency>-->
+<!--                <groupId>com.zjut.spring.boot</groupId>-->
+<!--                <artifactId>nb-spring-boot-dependencies</artifactId>-->
+<!--                <version>1.0.0-SNAPSHOT</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
 
     <dependencies>
         <dependency>
