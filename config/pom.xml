@@ -17,5 +17,11 @@
             <artifactId>common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <!-- starter的依赖项  -->
+        <dependency>
+            <groupId>com.zjut.spring.boot</groupId>
+            <artifactId>nb-spring-boot-starter-jdbc</artifactId>
+        </dependency>
     </dependencies>
 </project>
