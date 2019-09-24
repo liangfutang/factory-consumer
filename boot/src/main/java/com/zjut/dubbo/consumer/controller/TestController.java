@@ -2,8 +2,10 @@ package com.zjut.dubbo.consumer.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.zjut.dubbo.consumer.common.response.RestResponse;
+import com.zjut.dubbo.consumer.service.RoleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +17,9 @@ import org.springframework.web.client.RestTemplate;
 public class TestController {
 
     private static final Logger logger = LoggerFactory.getLogger(TestController.class);
+
+    @Autowired
+    private RoleService roleService;
 
     @RequestMapping("/test")
     public RestResponse test() {
@@ -30,8 +35,12 @@ public class TestController {
             ResponseEntity<JSONObject> forEntity = restTemplate.getForEntity("http://localhost:8080/test/testThreadPool", JSONObject.class);
             Thread.sleep(3000);
         }
+        return new RestResponse("success");
+    }
 
-
+    @GetMapping("/getRole")
+    public RestResponse getRole() {
+        roleService.getRole();
         return new RestResponse("success");
     }
 }
