@@ -1,4 +1,2 @@
 server:
   port: 8081
-dubbo:
-  ap

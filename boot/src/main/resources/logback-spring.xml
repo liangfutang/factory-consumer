@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <contextName>tsp-device-platform</contextName>
+    <contextName>consumer</contextName>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <!-- encoder 默认配置为PatternLayoutEncoder -->
@@ -12,7 +12,7 @@
     <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/tsp-device-platform/info.tsp-device-platform.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
+            <fileNamePattern>../logs/info.consumer.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
             <!-- each file should be at most 30MB, keep 30 days worth of history -->
             <MaxHistory>5</MaxHistory>
             <MaxFileSize>50MB</MaxFileSize>
@@ -27,7 +27,7 @@
     <appender name="sdkFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/tsp-device-platform/sdk.tsp-device-platform.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
+            <fileNamePattern>../logs/sdk.consumer.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
             <!-- each file should be at most 30MB, keep 30 days worth of history -->
             <MaxHistory>5</MaxHistory>
             <MaxFileSize>50MB</MaxFileSize>
@@ -42,7 +42,7 @@
     <appender name="monitorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/tsp-device-platform/monitor.tsp-device-platform.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
+            <fileNamePattern>../logs/monitor.consumer.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
             <!-- each file should be at most 30MB, keep 30 days worth of history -->
             <MaxHistory>5</MaxHistory>
             <MaxFileSize>50MB</MaxFileSize>
@@ -57,7 +57,7 @@
     <appender name="callFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/tsp-device-platform/call.tsp-device-platform.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
+            <fileNamePattern>../logs/call.consumer.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
             <!-- each file should be at most 30MB, keep 30 days worth of history -->
             <MaxHistory>5</MaxHistory>
             <MaxFileSize>50MB</MaxFileSize>
@@ -72,7 +72,7 @@
     <appender name="openserviceFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/tsp-device-platform/openservice.tsp-device-platform.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
+            <fileNamePattern>../logs/openservice.consumer.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
             <!-- each file should be at most 30MB, keep 30 days worth of history -->
             <MaxHistory>5</MaxHistory>
             <MaxFileSize>50MB</MaxFileSize>
@@ -87,7 +87,7 @@
     <appender name="kafkaFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/tsp-device-platform/kafka.tsp-device-platform.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
+            <fileNamePattern>../logs/kafka.consumer.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
             <!-- each file should be at most 30MB, keep 30 days worth of history -->
             <MaxHistory>5</MaxHistory>
             <MaxFileSize>50MB</MaxFileSize>
@@ -102,7 +102,7 @@
     <appender name="sqlFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/tsp-device-platform/sql.tsp-device-platform.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
+            <fileNamePattern>../logs/sql.consumer.%d{yyyy-MM-ddHH}.%i.log</fileNamePattern>
             <!-- each file should be at most 30MB, keep 30 days worth of history -->
             <MaxHistory>5</MaxHistory>
             <MaxFileSize>50MB</MaxFileSize>

@@ -13,6 +13,7 @@ public class WebConfig {
     @ConditionalOnMissingBean
     public WebServerFactoryCustomizer<ConfigurableWebServerFactory> webServerFactoryCustomizer() {
         return (factory) -> {
+            // 修改端口的优先级为：此处 > starter中的设置 > application.yml
             factory.setPort(8081);
         };
     }

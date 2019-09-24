@@ -28,10 +28,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.zjut.spring.boot</groupId>
-            <artifactId>nb-spring-boot-starter-jdbc</artifactId>
-        </dependency>
+        <!-- 多个模块中均有用到 -->
         <dependency>
             <groupId>com.zjut.dubbo.consumer</groupId>
             <artifactId>common</artifactId>
@@ -39,6 +36,10 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>com.zjut.spring.boot</groupId>
+            <artifactId>nb-spring-boot-starter-jdbc</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -62,6 +63,18 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- 管理项目所有模块  -->
+            <dependency>
+                <groupId>com.zjut.dubbo.consumer</groupId>
+                <artifactId>config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zjut.dubbo.consumer</groupId>
+                <artifactId>biz</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
