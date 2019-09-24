@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
+//@AllArgsConstructor
 public class RestResponse {
 
     private boolean success;
@@ -15,8 +15,14 @@ public class RestResponse {
 
     private String message;
 
+    private String sessionId;
+
     public RestResponse(Object data) {
         this.dafultFileds(true, data, errorCode, null);
+    }
+
+    public RestResponse(boolean success, Object data, Integer errorCode, String message) {
+        dafultFileds(success, data, errorCode, message);
     }
 
     private void dafultFileds(boolean success, Object data, Integer errorCode,String message) {
