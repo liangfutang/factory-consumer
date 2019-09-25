@@ -2,6 +2,7 @@ package com.zjut.dubbo.consumer.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.zjut.dubbo.consumer.common.response.RestResponse;
+import com.zjut.dubbo.consumer.service.RoleBaseService;
 import com.zjut.dubbo.consumer.service.RoleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,8 @@ public class TestController {
 
     @Autowired
     private RoleService roleService;
+    @Autowired
+    private RoleBaseService roleBaseService;
 
     @RequestMapping("/test")
     public RestResponse test() {
@@ -40,7 +43,13 @@ public class TestController {
 
     @GetMapping("/getRole")
     public RestResponse getRole() {
+        System.out.println("============开始测试baomidou的===========");
         roleService.getRole();
+        System.out.println("============结束测试baomidou的===========");
+
+        System.out.println("============开始测试自己封装的===========");
+        roleBaseService.getRole();
+        System.out.println("============结束测试自己封装的===========");
         return new RestResponse("success");
     }
 }
