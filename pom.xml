@@ -25,6 +25,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <project-common.version>1.0-SNAPSHOT</project-common.version>
     </properties>
 
     <dependencies>
@@ -35,19 +36,16 @@
             <version>${project.version}</version>
         </dependency>
 
-
+        <!-- 自定义开发的服务共用的工具  -->
         <dependency>
-            <groupId>com.zjut.spring.boot</groupId>
-            <artifactId>nb-spring-boot-starter-jdbc</artifactId>
+            <groupId>com.zjut.common</groupId>
+            <artifactId>project-common</artifactId>
+            <version>${project-common.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -88,6 +86,12 @@
                 <version>1.0.0-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.zjut.common</groupId>
+                        <artifactId>project-common</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>
