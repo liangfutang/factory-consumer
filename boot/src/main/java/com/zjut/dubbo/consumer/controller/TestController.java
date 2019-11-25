@@ -52,4 +52,9 @@ public class TestController {
         System.out.println("============结束测试自己封装的===========");
         return new RestResponse("success");
     }
+
+    @GetMapping("/updateRole")
+    public RestResponse updateRole () {
+        return new RestResponse(roleBaseService.update());
+    }
 }

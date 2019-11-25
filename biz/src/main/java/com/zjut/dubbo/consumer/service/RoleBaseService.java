@@ -12,4 +12,11 @@ public interface RoleBaseService extends BaseService<SysRoleDo> {
      * 测试用
      */
     void getRole();
+
+    /**
+     * 用来测试事务的更新方法
+     *
+     * @return
+     */
+    int update();
 }
