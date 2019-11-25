@@ -30,7 +30,7 @@ public class RoleBaseServiceImpl extends BaseServiceImpl<RoleMapper, SysRoleDo> 
     public int update() {
         SysRoleDo sysRoleDo1 = baseMapper.selectById(56);
         sysRoleDo1.setGmtCreate(new Date());
-        sysRoleDo1.setRoleSign("admin");
+        sysRoleDo1.setRoleSign("admin212vv");
         sysRoleDo1.setRemark(null);
 
         UpdateWrapper<SysRoleDo> sysRoleDoUpdateWrapper = new UpdateWrapper<>();
@@ -50,7 +50,7 @@ public class RoleBaseServiceImpl extends BaseServiceImpl<RoleMapper, SysRoleDo> 
      * @param sysRoleDoUpdateWrapper
      * @return
      */
-    @Transactional(rollbackFor = Exception.class, timeout = 10, isolation = Isolation.READ_UNCOMMITTED, propagation = Propagation.REQUIRES_NEW)
+    @Transactional(rollbackFor = Exception.class, timeout = 10000, isolation = Isolation.READ_UNCOMMITTED, propagation = Propagation.REQUIRES_NEW)
     public int updateTranscation(SysRoleDo sysRoleDo1, UpdateWrapper<SysRoleDo> sysRoleDoUpdateWrapper) {
         SysRoleDo sysRoleDotem = baseMapper.selectById(sysRoleDo1.getRoleId());
         int update = baseMapper.update(sysRoleDo1, sysRoleDoUpdateWrapper);
