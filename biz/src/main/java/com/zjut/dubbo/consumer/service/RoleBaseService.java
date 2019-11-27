@@ -19,4 +19,9 @@ public interface RoleBaseService extends BaseService<SysRoleDo> {
      * @return
      */
     int update();
+
+    /**
+     * 幻读测试
+     */
+    void repeatRead();
 }

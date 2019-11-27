@@ -57,4 +57,10 @@ public class TestController {
     public RestResponse updateRole () {
         return new RestResponse(roleBaseService.update());
     }
+
+    @GetMapping("/repeatRead")
+    public RestResponse repeatRead() {
+        roleBaseService.repeatRead();
+        return new RestResponse(null);
+    }
 }

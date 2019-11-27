@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @MapperScan("com.zjut.dubbo.consumer.mapper")
 //@EnableTransactionManagement
-@EnableAspectJAutoProxy(exposeProxy=true,proxyTargetClass=true)
+//@EnableAspectJAutoProxy(exposeProxy=true,proxyTargetClass=true)
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
