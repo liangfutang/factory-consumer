@@ -92,7 +92,7 @@ public class RoleBaseServiceImpl extends BaseServiceImpl<RoleMapper, SysRoleDo> 
      * @param sysRoleDoUpdateWrapper
      * @return
      */
-    @Transactional(rollbackFor = Exception.class, timeout = 10000, isolation = Isolation.READ_UNCOMMITTED, propagation = Propagation.REQUIRES_NEW)
+    @Transactional(rollbackFor = Exception.class, timeout = 10, isolation = Isolation.READ_UNCOMMITTED, propagation = Propagation.REQUIRES_NEW)
     public int updateTranscation(SysRoleDo sysRoleDo1, UpdateWrapper<SysRoleDo> sysRoleDoUpdateWrapper) {
         SysRoleDo sysRoleDotem = baseMapper.selectById(sysRoleDo1.getRoleId());
         int update = baseMapper.update(sysRoleDo1, sysRoleDoUpdateWrapper);
@@ -111,7 +111,7 @@ public class RoleBaseServiceImpl extends BaseServiceImpl<RoleMapper, SysRoleDo> 
      *
      * @return
      */
-//    @Transactional(rollbackFor = Exception.class, timeout = 10000, isolation = Isolation.READ_UNCOMMITTED, propagation = Propagation.REQUIRED)
+//    @Transactional(rollbackFor = Exception.class, timeout = 10, isolation = Isolation.READ_UNCOMMITTED, propagation = Propagation.REQUIRED)
     public int updateTranscation1() {
         SysRoleDo sysRoleDo1 = baseMapper.selectById(57);
         sysRoleDo1.setGmtCreate(new Date());
