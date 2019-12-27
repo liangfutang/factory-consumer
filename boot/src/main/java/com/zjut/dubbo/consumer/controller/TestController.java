@@ -27,9 +27,19 @@ public class TestController {
     @Autowired
     private TestDubboService testDubboService;
 
-    @GetMapping("/testDubbo")
+    @GetMapping("/testDubboValidation")
     public RestResponse testDubbo() {
         testDubboService.testValidate();
+        return new RestResponse("success");
+    }
+
+    /**
+     * 测试dubbo分组
+     * @return
+     */
+    @GetMapping("/testDubboGroup")
+    public RestResponse testDubboGroup() {
+        testDubboService.testDubboGroup();
         return new RestResponse("success");
     }
 
