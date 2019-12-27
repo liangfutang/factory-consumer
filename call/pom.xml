@@ -11,5 +11,12 @@
 
     <artifactId>call</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.zjut.dubbo.provider</groupId>
+            <artifactId>client</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>

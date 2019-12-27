@@ -1,6 +1,7 @@
 package com.zjut.dubbo.consumer.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.zjut.dubbo.consumer.call.TestDubboService;
 import com.zjut.dubbo.consumer.common.response.RestResponse;
 import com.zjut.dubbo.consumer.service.RoleBaseService;
 import com.zjut.dubbo.consumer.service.RoleService;
@@ -23,12 +24,20 @@ public class TestController {
     private RoleService roleService;
     @Autowired
     private RoleBaseService roleBaseService;
+    @Autowired
+    private TestDubboService testDubboService;
+
+    @GetMapping("/testDubbo")
+    public RestResponse testDubbo() {
+        testDubboService.testValidate();
+        return new RestResponse("success");
+    }
 
     @RequestMapping("/test")
     public RestResponse test() {
         logger.info("日志测试");
         System.out.println("进入到测试方法");
-        return new RestResponse("test ssuccess");
+        return new RestResponse("test success");
     }
 
     @GetMapping("/testThreadPool")
