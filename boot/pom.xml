@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>factory-consumer</artifactId>
-        <groupId>com.zjut.dubbo.consumer</groupId>
+        <groupId>com.zjut.factory.consumer</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -12,15 +12,15 @@
     <artifactId>consumer-boot</artifactId>
     <dependencies>
         <dependency>
-            <groupId>com.zjut.dubbo.consumer</groupId>
+            <groupId>com.zjut.factory.consumer</groupId>
             <artifactId>consumer-config</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.zjut.dubbo.consumer</groupId>
+            <groupId>com.zjut.factory.consumer</groupId>
             <artifactId>consumer-biz</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.zjut.dubbo.consumer</groupId>
+            <groupId>com.zjut.factory.consumer</groupId>
             <artifactId>consumer-call</artifactId>
         </dependency>
     </dependencies>
