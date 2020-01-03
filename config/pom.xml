@@ -9,6 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>config</artifactId>
+    <artifactId>consumer-config</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.zjut.dubbo.consumer</groupId>
+            <artifactId>consumer-common</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

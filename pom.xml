@@ -30,13 +30,6 @@
     </properties>
 
     <dependencies>
-        <!-- 多个模块中均有用到 -->
-        <dependency>
-            <groupId>com.zjut.dubbo.consumer</groupId>
-            <artifactId>common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
         <!-- 自定义开发的服务共用的工具  -->
         <dependency>
             <groupId>com.zjut.common</groupId>
@@ -83,17 +76,22 @@
             <!-- 管理项目所有模块  -->
             <dependency>
                 <groupId>com.zjut.dubbo.consumer</groupId>
-                <artifactId>config</artifactId>
+                <artifactId>consumer-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.zjut.dubbo.consumer</groupId>
-                <artifactId>biz</artifactId>
+                <artifactId>consumer-config</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.zjut.dubbo.consumer</groupId>
-                <artifactId>call</artifactId>
+                <artifactId>consumer-biz</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zjut.dubbo.consumer</groupId>
+                <artifactId>consumer-call</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
