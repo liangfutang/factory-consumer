@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!--  下面用到了dependencyManagement，和这里的parent冲突  -->
+    <!--    <parent>-->
+    <!--        <groupId>org.springframework.boot</groupId>-->
+    <!--        <artifactId>spring-boot-starter-parent</artifactId>-->
+    <!--        <version>2.1.6.RELEASE</version>-->
+    <!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+    <!--    </parent>-->
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
+    <groupId>com.zjut.dubbo.consumer</groupId>
+    <artifactId>factory-consumer</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>factory-consumer</name>
+    <description>Parent project for Spring Boot</description>
+
     <modules>
         <module>boot</module>
         <module>common</module>
@@ -10,18 +23,6 @@
         <module>config</module>
         <module>biz</module>
     </modules>
-<!--  下面用到了dependencyManagement，和这里的parent冲突  -->
-<!--    <parent>-->
-<!--        <groupId>org.springframework.boot</groupId>-->
-<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
-<!--        <version>2.1.6.RELEASE</version>-->
-<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-<!--    </parent>-->
-    <groupId>com.zjut.dubbo.consumer</groupId>
-    <artifactId>dubboconsumer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>dubboconsumer</name>
-    <description>Parent project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
