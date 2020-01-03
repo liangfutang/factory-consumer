@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.zjut.dubbo.provider</groupId>
-            <artifactId>client</artifactId>
+            <artifactId>provider-client</artifactId>
         </dependency>
     </dependencies>
 
