@@ -117,7 +117,7 @@
                 </exclusions>
             </dependency>
             <dependency>
-                <groupId>com.zjut.dubbo.provider</groupId>
+                <groupId>com.zjut.factory.provider</groupId>
                 <artifactId>provider-client</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
                 <exclusions>
