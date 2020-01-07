@@ -2,10 +2,5 @@ server:
   port: 8081
 
 spring:
-  dubbo:
-    application:
-      name: dubbo-consumer
-    registry:
-      address: zookeeper://dev.cdh.ecarx.local:2181 #zookeeper地址
-      port: 2181
-    scan: com.zjut.factory.consumer.call.impl
+  profiles:
+    active: dev
