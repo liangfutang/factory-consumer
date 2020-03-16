@@ -29,3 +29,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Jrebel热部署插件  ###
+rebel*.xml
+.rebel.xml.bak
