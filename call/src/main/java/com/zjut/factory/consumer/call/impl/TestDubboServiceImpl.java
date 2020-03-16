@@ -1,9 +1,9 @@
 package com.zjut.factory.consumer.call.impl;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.zjut.factory.consumer.call.TestDubboService;
 import com.zjut.factory.provider.client.dto.TestDubboValidationDto;
 import com.zjut.factory.provider.client.service.TestService;
+import org.apache.dubbo.config.annotation.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -34,6 +34,7 @@ public class TestDubboServiceImpl implements TestDubboService {
             logger.info("显示dubbo入参校验的dubbo接口的返回结果:" + s);
         } catch (Exception e) {
             logger.error("调用dubbo入参校验接口异常:" + e.getMessage());
+            throw new RuntimeException(e.getMessage());
         }
         return "success";
     }

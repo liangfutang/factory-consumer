@@ -1,8 +1,20 @@
 spring:
-  dubbo:
-    application:
-      name: dubbo-consumer
-    registry:
-      address: zookeeper://dev.cdh.ecarx.local:2181 #zookeeper地址
-      port: 2181
-    scan: com.zjut.factory.consumer.call.impl
+  application:
+    name: dubbo-consumer
+
+dubbo:
+  scan:
+    base-packages: com.zjut.factory.consumer.call.impl
+  protocol:
+    name: dubbo
+    port: -1  #自行去找一个可用的端口
+  registry:
+    address: zookeeper://dev.cdh.ecarx.local:${embedded.zookeeper.port}
+#    file: ${user.home}/dubbo-cache/${spring.application.name}/dubbo.cache
+#  metadata-report:
+#    address: zookeeper://127.0.0.1:2181
+
+#提供给上面的register地址中配置使用
+embedded:
+  zookeeper:
+    port: 2181
