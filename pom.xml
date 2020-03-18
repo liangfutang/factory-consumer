@@ -27,6 +27,7 @@
     <properties>
         <java.version>1.8</java.version>
         <project-common.version>1.0-SNAPSHOT</project-common.version>
+        <starter.version>1.0.0-SNAPSHOT</starter.version>
     </properties>
 
     <dependencies>
@@ -111,7 +112,7 @@
             <dependency>
                 <groupId>com.zjut.spring.boot</groupId>
                 <artifactId>factory-spring-boot-dependencies</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${starter.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
                 <exclusions>
