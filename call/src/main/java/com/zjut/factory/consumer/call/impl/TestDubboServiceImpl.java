@@ -48,4 +48,14 @@ public class TestDubboServiceImpl implements TestDubboService {
         logger.info("rose组的调动成功了:" + test1);
         return "success";
     }
+
+    @Override
+    public String testDubboAopInserArg() {
+        logger.info("准备开始调提供者，在aop中添加参数的的接口");
+        TestDubboValidationDto dto = new TestDubboValidationDto();
+        dto.setId(10);
+        dto.setName("jack");
+        String s = jackTestService.testValidation(dto);
+        return s;
+    }
 }

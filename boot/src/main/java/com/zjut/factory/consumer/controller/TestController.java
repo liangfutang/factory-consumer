@@ -27,6 +27,12 @@ public class TestController {
     @Autowired
     private TestDubboService testDubboService;
 
+    @GetMapping("/aop/insert")
+    public RestResponse testAopInsert() {
+        String s = testDubboService.testDubboAopInserArg();
+        return new RestResponse(s);
+    }
+
     @GetMapping("/testDubboValidation")
     public RestResponse testDubbo() {
         testDubboService.testValidate();

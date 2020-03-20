@@ -16,4 +16,10 @@ public interface TestDubboService {
      * @return
      */
     String testDubboGroup();
+
+    /**
+     * 调提供者接口，测试提供者在入参中添加一个参数
+     * @return
+     */
+    String testDubboAopInserArg();
 }
