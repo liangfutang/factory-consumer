@@ -9,7 +9,7 @@ dubbo:
     name: dubbo
     port: -1  #自行去找一个可用的端口
   registry:
-    address: zookeeper://dev.cdh.ecarx.local:${embedded.zookeeper.port}
+    address: zookeeper://127.0.0.1:${embedded.zookeeper.port}
 #    file: ${user.home}/dubbo-cache/${spring.application.name}/dubbo.cache
 #  metadata-report:
 #    address: zookeeper://127.0.0.1:2181
