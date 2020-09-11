@@ -8,8 +8,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <version>${factory-consumer.version}</version>
     <artifactId>consumer-boot</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>com.zjut.factory.consumer</groupId>
