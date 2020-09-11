@@ -30,6 +30,7 @@
         <java.version>1.8</java.version>
         <project-common.version>1.0-SNAPSHOT</project-common.version>
         <project-starter.version>1.0.0-SNAPSHOT</project-starter.version>
+        <factory-provider-client.version>1.0.0-SNAPSHOT</factory-provider-client.version>
     </properties>
 
     <dependencies>
@@ -139,7 +140,7 @@
             <dependency>
                 <groupId>com.zjut.factory.provider</groupId>
                 <artifactId>provider-client</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${factory-provider-client.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>com.zjut.common</groupId>
