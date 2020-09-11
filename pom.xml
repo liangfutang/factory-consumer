@@ -22,14 +22,16 @@
         <module>call</module>
         <module>config</module>
         <module>biz</module>
+        <module>client</module>
+        <module>openservice</module>
     </modules>
 
     <properties>
         <factory-consumer.version>0.0.1-SNAPSHOT</factory-consumer.version>
+        <project-starter.version>1.0.0-SNAPSHOT</project-starter.version>
 
         <java.version>1.8</java.version>
         <project-common.version>1.0-SNAPSHOT</project-common.version>
-        <project-starter.version>1.0.0-SNAPSHOT</project-starter.version>
         <factory-provider-client.version>1.0.0-SNAPSHOT</factory-provider-client.version>
     </properties>
 
@@ -95,7 +97,23 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- 管理项目所有模块  -->
+            <!--自定义starter包 start-->
+            <dependency>
+                <groupId>com.zjut.spring.boot</groupId>
+                <artifactId>project-spring-boot-dependencies</artifactId>
+                <version>${project-starter.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.zjut.common</groupId>
+                        <artifactId>project-common</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!--自定义starter包 end-->
+
+            <!--子模块 start-->
             <dependency>
                 <groupId>com.zjut.factory.consumer</groupId>
                 <artifactId>consumer-common</artifactId>
@@ -116,6 +134,17 @@
                 <artifactId>consumer-call</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.zjut.factory.consumer</groupId>
+                <artifactId>consumer-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zjut.factory.consumer</groupId>
+                <artifactId>consumer-openservice</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--子模块 end-->
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -124,19 +153,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>com.zjut.spring.boot</groupId>
-                <artifactId>project-spring-boot-dependencies</artifactId>
-                <version>${project-starter.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.zjut.common</groupId>
-                        <artifactId>project-common</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
+
             <dependency>
                 <groupId>com.zjut.factory.provider</groupId>
                 <artifactId>provider-client</artifactId>

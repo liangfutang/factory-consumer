@@ -9,13 +9,19 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <version>${factory-consumer.version}</version>
-    <artifactId>consumer-boot</artifactId>
+    <artifactId>consumer-openservice</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.zjut.factory.consumer</groupId>
+            <artifactId>consumer-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zjut.factory.consumer</groupId>
             <artifactId>consumer-biz</artifactId>
         </dependency>
+
     </dependencies>
+
 
 </project>

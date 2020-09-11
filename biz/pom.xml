@@ -13,6 +13,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.zjut.factory.consumer</groupId>
+            <artifactId>consumer-call</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.zjut.spring.boot</groupId>
             <artifactId>project-spring-boot-starter-jdbc</artifactId>
         </dependency>

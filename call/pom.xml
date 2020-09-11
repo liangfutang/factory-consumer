@@ -13,9 +13,16 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.zjut.factory.consumer</groupId>
+            <artifactId>consumer-config</artifactId>
+        </dependency>
+
+        <!--调用第三方服务 start-->
+        <dependency>
             <groupId>com.zjut.factory.provider</groupId>
             <artifactId>provider-client</artifactId>
         </dependency>
+        <!--调用第三方服务 end-->
     </dependencies>
 
 

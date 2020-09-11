@@ -11,5 +11,8 @@
     <version>${factory-consumer.version}</version>
     <artifactId>consumer-common</artifactId>
 
+    <dependencies>
+
+    </dependencies>
 
 </project>
