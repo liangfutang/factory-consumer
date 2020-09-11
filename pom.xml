@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-<!--  下面用到了dependencyManagement，和这里的parent冲突  -->
-    <!--    <parent>-->
-    <!--        <groupId>org.springframework.boot</groupId>-->
-    <!--        <artifactId>spring-boot-starter-parent</artifactId>-->
-    <!--        <version>2.1.6.RELEASE</version>-->
-    <!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-    <!--    </parent>-->
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <groupId>com.zjut.factory.consumer</groupId>
@@ -29,75 +22,20 @@
     <properties>
         <factory-consumer.version>0.0.1-SNAPSHOT</factory-consumer.version>
         <project-starter.version>1.0.0-SNAPSHOT</project-starter.version>
+        <project-common.version>1.0-SNAPSHOT</project-common.version>
 
         <java.version>1.8</java.version>
-        <project-common.version>1.0-SNAPSHOT</project-common.version>
         <factory-provider-client.version>1.0.0-SNAPSHOT</factory-provider-client.version>
+        <guava.version>27.0-jre</guava.version>
+        <apache.zookeeper.version>3.4.14</apache.zookeeper.version>
+        <slf4j-log4j12.version>1.6.1</slf4j-log4j12.version>
+        <slf4j-api.version>1.6.1</slf4j-api.version>
+        <alibaba.fastjson.version>1.2.56</alibaba.fastjson.version>
     </properties>
-
-    <dependencies>
-        <!-- 自定义开发的服务共用的工具  -->
-        <dependency>
-            <groupId>com.zjut.common</groupId>
-            <artifactId>project-common</artifactId>
-            <version>${project-common.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.45</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aspects</artifactId>
-            <version>5.1.2.RELEASE</version>
-        </dependency>
-
-        <!-- 整合dubbo -->
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>2.7.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-dependencies-zookeeper</artifactId>
-            <version>2.7.3</version>
-            <type>pom</type>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.6.1</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.6.1</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
 
     <dependencyManagement>
         <dependencies>
-            <!--自定义starter包 start-->
+            <!--自定义starter或其他相关包 start-->
             <dependency>
                 <groupId>com.zjut.spring.boot</groupId>
                 <artifactId>project-spring-boot-dependencies</artifactId>
@@ -111,7 +49,12 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            <!--自定义starter包 end-->
+            <dependency>
+                <groupId>com.zjut.common</groupId>
+                <artifactId>project-common</artifactId>
+                <version>${project-common.version}</version>
+            </dependency>
+            <!--自定义starter或其他相关包 end-->
 
             <!--子模块 start-->
             <dependency>
@@ -145,6 +88,36 @@
                 <version>${project.version}</version>
             </dependency>
             <!--子模块 end-->
+
+            <!--第三方库依赖 start-->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${apache.zookeeper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j-log4j12.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${alibaba.fastjson.version}</version>
+            </dependency>
+            <!--第三方库依赖 end-->
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
